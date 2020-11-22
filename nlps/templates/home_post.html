@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+    {{ form.csrf_token }}
+
+    <article class="media content-section">
+      <div class="media-body">
+        <div class="article-metadata">
+          {{ form.file }}
+          <small class="text-muted"> Upload a csv or excel file </small>
+        </div>
+
+        <p class="article-content">{{ form.choose_col }}</p>
+        <input type="submit" value="Upload File" name="process">
+      </div>
+    </article>
+
+{% endblock content %}

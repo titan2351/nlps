@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="main-bar-ultra-mini-outer">
+	<div class="container main-bar-ultra-mini">
+		<div id="tagline" class="row">
+			<p>
+			Final step of the process.
+            Click on the process button when done to download the excel file enriched with model predictions.
+			</p>
+            <br>
+            <p>
+               <form method="POST"  enctype="multipart/form-data">
+                    {{ form.csrf_token }}
+                    <small class="text-muted"> Choose column to be processed </small>
+                    {{ form.choose_col }}<br><br><br>
+                    <input type="submit" id = "pred" value="Process" name="submit">
+                </form>
+            </p>
+
+		</div>
+	</div>
+</div>
+
+{% endblock content %}
+
+

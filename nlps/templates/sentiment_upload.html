@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="main-bar-ultra-mini-outer">
+	<div class="container main-bar-ultra-mini">
+		<div id="tagline" class="row">
+			<p>
+			Please upload an excel file using the link below. You will be guided through the process.
+			</p>
+            <br>
+            <p>
+                <form method="POST"  enctype="multipart/form-data">
+                    {{ form.csrf_token }}
+                    {{ form.xls }}<br><br><br>
+                    <button type="submit">Upload</button>
+                </form>
+            </p>
+
+		</div>
+	</div>
+</div>
+
+{% endblock content %}
