@@ -6,7 +6,7 @@ from wtforms.fields import SelectField
 from flask_wtf.file import FileField, FileRequired, FileAllowed
 from flask_uploads import configure_uploads, IMAGES, UploadSet, DOCUMENTS
 from werkzeug.utils import secure_filename, redirect
-from .src.sentiment import get_sentiment
+from src.sentiment import get_sentiment
 from flask import send_file
 
 app = Flask(__name__, static_folder="../static/")
